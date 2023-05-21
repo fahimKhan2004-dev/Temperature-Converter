@@ -1,0 +1,104 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(109, 58, 39);
+    color: white;
+}
+*{
+    /* disable copy text code starts here*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    /* disable copy text code ends here*/
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.heading--div{
+    display: flex;
+    justify-content: center;
+}
+.main__heading{
+    display: flex;
+    text-align: center;
+    text-shadow: 0 2px 6px white;
+    font-family: 'Titillium Web', sans-serif;
+    border-bottom: 2px dashed rgb(80, 48, 48);
+    padding-bottom: 2px;
+    font-style: italic;
+}
+.main__section--div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+.input__section, .output__section{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.equal--div{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.equal--div > i{
+    font-size: xx-large;
+}
+.input__text, .output__text{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    font-size: 22px;
+}
+.title{
+    font-size: 20px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    margin: 50% 10px;
+    text-align: center;
+}
+
+/* responsiveness starts here */
+@media screen and (max-width: 710px){
+    body{
+        background-color: rgb(158, 74, 44);
+    }
+    .main__section--div{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main__heading{
+        border-bottom: 1px dashed rgb(80, 48, 48);
+    }
+    .input__section, .output__section{
+        margin: 1.5rem;
+    }
+    label{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 330px){
+    body{
+        background-color: rgb(19, 126, 203);
+    }
+    .main__heading{
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    .input__section, .output__section{
+        margin: 1rem;
+    }
+}
+/* responsiveness ends here */
